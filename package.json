@@ -1,0 +1,17 @@
+{
+  "name": "cpu-overload-monitor",
+  "version": "1.0.0",
+  "description": "display cpu overload status in terminal",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "console.table": "^0.10.0",
+    "ps-list": "^8.0.0"
+  }
+}
