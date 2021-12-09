@@ -1,7 +1,7 @@
 import psList from "ps-list";
 import chalk from "chalk";
 import "console.table";
-const MAX_OVERFLOAD = 20;
+const MAX_OVERFLOAD = 80;
 const detectOverload = async () => {
   let processes = await psList();
   const overloadProcessed = [];
