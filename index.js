@@ -35,17 +35,17 @@ function getTableCol(process) {
     .replace(/(.*?) .*/, "$1");
   if (process.cpu < MAX_OVERFLOAD) {
     return {
-      name: chalk.green(name.padEnd(20).substr(0, 20)),
-      pid: chalk.green(String(process.pid).padEnd(10)),
-      cpu: chalk.white.bgGreen.bold((process.cpu + "%").padStart(8)),
-      memery: chalk.white.bgGreen.bold((process.memory + "%").padStart(8)),
+      name: chalk.green(name.padEnd(20, " ").substr(0, 20)),
+      pid: chalk.green(String(process.pid).padEnd(10, " ")),
+      cpu: chalk.white.bgGreen.bold((process.cpu + "%").padStart(8, " ")),
+      memery: chalk.white.bgGreen.bold((process.memory + "%").padStart(8, " ")),
     };
   } else {
     return {
-      name: chalk.red(name.padEnd(20).substr(0, 20)),
-      pid: chalk.red(String(process.pid).padEnd(10)),
-      cpu: chalk.white.bgRed.bold((process.cpu + "%").padStart(8)),
-      memery: chalk.white.bgRed.bold((process.memory + "%").padStart(8)),
+      name: chalk.red(name.padEnd(20, " ").substr(0, 20)),
+      pid: chalk.red(String(process.pid).padEnd(10, " ")),
+      cpu: chalk.white.bgRed.bold((process.cpu + "%").padStart(8, " ")),
+      memery: chalk.white.bgRed.bold((process.memory + "%").padStart(8, " ")),
     };
   }
 }
